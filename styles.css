@@ -372,3 +372,82 @@ section {
     margin-bottom: 15px;
     font-size: 1.1rem; 
 }
+
+.tech-tag {
+    display: inline-block;
+    background-color: #e6f0ff;   /* light blue background */
+    color: #0056b3;              /* darker blue text */
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 10px;
+    margin: 4px 6px 0 0;         /* space between tags */
+    border-radius: 20px;         /* rounded pill style */
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.tech-tag:hover {
+    background-color: #0056b3;
+    color: #fff;
+    cursor: default;
+    transform: scale(1.05);
+}
+
+
+
+
+.skill-tag {
+    display: inline-block;
+    background-color: #f3f3f3;   /* light gray background */
+    color: #333;                 /* dark text */
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 12px;
+    margin: 4px 6px 0 0;         /* space between tags */
+    border: 1px solid #ccc;      /* subtle border */
+    border-radius: 6px;          /* softer corners than tech-tag */
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.skill-tag:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+    cursor: default;
+    transform: translateY(-2px);
+}
+
+
+.social-links i {
+    font-size: 32px;   /* set any size you want */
+    margin: 0 10px;    /* spacing between icons */
+    color: #333;       /* optional styling */
+    transition: transform 0.2s ease;
+}
+
+.social-links i:hover {
+    color: #0077b5;    /* LinkedIn blue on hover */
+    transform: scale(1.2);  /* zoom effect */
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact-item i {
+    font-size: 22px;       /* make icons bigger */
+    color: #0056b3;        /* theme color */
+    margin-right: 12px;    /* space between icon and text */
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+

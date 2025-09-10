@@ -83,7 +83,7 @@ tured documents and take necessary decisions or measures based on requirements. 
  asynchronous scalable design for handling a large number of users.
                             </div>
                             <div class="experience-category">
-                                Built a RAG-based systematic chat bot, customized fully on local projects or documents, and
+                                Built a Knowledge Graph-RAG-based document agent, customized fully on local projects and documents. The agent
  can answer user queries from these artifacts. Reduced hallucinations by establishing relationships
  between documents and their context.
                             </div>
@@ -99,21 +99,15 @@ tured documents and take necessary decisions or measures based on requirements. 
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">May 2023 - June 2024</span>
-                        <h3>Director of Logistics</h3>
-                        <h4>BUET Cyber Security Club</h4>
-                        <p>Successfully organized and executed a Capture The Flag (CTF) competition, showcasing adept coordination, leadership, and problem-solving skills.</p>
-                    </div>
-                </div>
+                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="date">Nov 2023 - Jan 2024</span>
                         <h3>Intern</h3>
                         <h4>CIRT, Bangladesh Computer Council</h4>
                          Explored an open source SIEM (Wazuh) to deploy, customizing it for a few features from an AI/ML
- perspective.       
+ perspective. Tried to integrate some ML models for anomaly detection from network data and logs. Worked with cyber experts, had a great learning experience.    
 
                     </div>
                 </div>
@@ -126,6 +120,18 @@ tured documents and take necessary decisions or measures based on requirements. 
                             Elevated data analysis precision and improved model accuracy through effective collaboration with teams.
                     </div>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">May 2023 - June 2024</span>
+                        <h3>Director of Logistics</h3>
+                        <h4>BUET Cyber Security Club</h4>
+                        <p>Successfully organized and executed a Capture The Flag (CTF) competition, showcasing adept coordination, leadership, and problem-solving skills.</p>
+                    </div>
+                </div>
+
+
+
         </div>
     </section>
 
@@ -145,7 +151,7 @@ tured documents and take necessary decisions or measures based on requirements. 
                 </div>
                 <div class="research-item">
                     <h3>5G RAG Based Conformance Testing</h3>
-                    <div> On Going</div>
+                    <div style="color: green;"> On Going</div>
                     <p>We proposed a fully automated end-to-end framework that utilizes a Retrieval-Augmented Generation
  (RAG) pipeline. Our approach grounds LLM outputs in verified, domain-specific data to minimize
  hallucinations, and overcomes cross-section dependency challenges by integrating a robust con- text
@@ -153,6 +159,22 @@ tured documents and take necessary decisions or measures based on requirements. 
  5G mobility management procedures in under 3 hours. Overall, our framework offers a scalable, reliable,
  and robust solution for automating compliance testing in complex, ever-changing domains like 5G and
  beyond.</p>
+                </div>
+
+                <div class="research-item">
+                    <h3>Data Leakage Detection in Microservice Architectures</h3>
+                    <div style="color: green;">On Going</div>
+                    <p>
+                        This research investigates vulnerabilities that lead to data leakage in microservice-based systems, 
+                        particularly within Kubernetes and Istio service mesh environments. We simulate adversarial 
+                        scenarios such as service impersonation, traffic interception, and unintended metadata exposure 
+                        to evaluate confidentiality and integrity risks. To mitigate these, we propose a hybrid framework 
+                        combining policy-driven security (e.g., Istio AuthorizationPolicies, scoped service accounts) with 
+                        anomaly detection models trained on latency-based features (p50/p90/p99, burstiness, drift, 
+                        retry metrics). Our approach leverages Prometheus metrics, lightweight one-class models, and 
+                        shallow autoencoders to detect MITM-induced leakage in real time, offering a scalable and 
+                        resource-efficient defense mechanism for large-scale cloud-native deployments.
+                    </p>
                 </div>
 
                 <div class="research-item">
@@ -182,6 +204,161 @@ tured documents and take necessary decisions or measures based on requirements. 
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>MeshMITM – Simulating MITM in Kubernetes Service Mesh</h3>
+                    <!-- <p class="project-type">Personal Project</p> -->
+                    <p>This project simulates Man-in-the-Middle (MITM) attacks in a Kubernetes + Istio service mesh and builds an  <b>anomaly detection</b> framework based on latency features.
+                        Started with simuating various MITM attacks (service impersonation, traffic interception, metadata exposure) in a microservice architecture, and mitigation using Istio AuthorizationPolicies and scoped service accounts.
+                        Then developed an anomaly detection framework using Prometheus metrics to identify MITM-induced anomalies.
+                         By analyzing p50/p90/p99 latencies, dispersion indices, burstiness, drift measures, the system captures subtle delays and artifacts caused by malicious proxies. 
+                         Lightweight models such as One-Class SVM, Isolation Forest, and shallow autoencoders are applied with sliding-window post-processing for stable detection.
+                         </p>
+                    <div class="project-tech">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Kubernetes (Minikube) </span>
+                            <span class="tech-tag">Istio</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Numpy</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">mTLS</span>
+                            <span class="tech-tag">Microservices</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Asif-droid/micro-svc-mitm-threat-analysis/blob/main/MITM_Attack_Report_K8s_Istio_Updated.pdf" class="project-link">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Climate Report generation from Bengla Audio</h3>
+                    <!-- <p class="project-type">Personal Project</p> -->
+                    <p>The Audio Reporting System is an AI-powered platform that transforms disaster-related phone calls into structured, actionable PDF reports for emergency response teams. 
+                        Designed to work without smartphones, apps, or internet access, it captures voice reports, transcribes them into text, extracts key details, and generates professional reports enriched with contextual information.
+                         With built-in scalability, human validation options, and a fine-tuning pipeline for continuous improvement, the system ensures faster, more reliable crisis reporting while empowering responders to act quickly and effectively.</p>
+                    <div class="project-tech">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Facebook M4tv2 model </span>
+                            <span class="tech-tag">Gemini 2.0</span>
+                            <span class="tech-tag">Pydantic</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">ML models</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">RabbitMQ</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Ml Flow</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Asif-droid/audio_reporting/blob/main/presentation.md" class="project-link">View Details</a>
+                </div>
+            </div>
+
+
+
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Neer–Automated Quality Assurance and 
+Monitoring of Urban Water Usage</h3>
+                    <!-- <p class="project-type">Personal Project</p> -->
+                    <p>This project aims to design a smart water management model aligned with the under-development District Metering Area (DMA) System. 
+                        The proposed system leverages IoT-enabled digital meters to automatically update water consumption and quality data to secure cloud storage at regular intervals.
+                         IoT sensors will continuously measure various water quality parameters, ensuring real-time monitoring and transparency. 
+                         The stored data will be systematically fed into a machine learning model, enabling advanced comparison, analysis, and forecasting of water quality trends across different regions. 
+                         By integrating IoT, cloud computing, and predictive analytics, this system will support proactive water management, early anomaly detection, and sustainable resource utilization.</p>
+                    <div class="project-tech">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Arduino </span>
+                            <span class="tech-tag">IoT sensors</span>
+                            <span class="tech-tag">Wi-Fi</span>
+                            <span class="tech-tag">Cloud database</span>
+                            <span class="tech-tag">ML models</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Asif-droid/wasa_water_project/blob/main/Neer-Poster-NSysS22.pdf" class="project-link">View Details</a>
+                </div>
+            </div>
+            
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Anomaly Detection in ECG</h3>
+                    <p class="project-type">Academic Project (CSE-472)</p>
+                    <p>Project uses transformer model (encoder) layer to separate healthy heart signals from unhealthy ones.
+                        We used MIT-BIH Arrhythmia dataset to train and test our model. The model achieved high accuracy in classifying ECG signals.
+                        The project also includes data visualization using libraries like Matplotlib and Plotly to analyze ECG patterns and anomalies.
+                    </p>
+                    <div class="project-tech">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Plotly</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Transformer</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Asif-droid/CSE-472-project-anomally-detection-in-ecg-/tree/main" class="project-link">View Details</a>
+                </div>
+            </div>
+
+
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Gender Inequality and Climate Change Analysis</h3>
+                        <p>This project explores the relationship between gender inequality and climate change.
+                             The analysis leverages various data visualization and data manipulation libraries in Python to provide insights into how these two critical issues intersect.
+                              This was crafted to participate in the Nasa Space Apps Challenge, 2024 competition.</p>
+                        <div class="project-tech">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-stack">
+                                <span class="tech-tag">NumPy</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Matplotlib</span>
+                                <span class="tech-tag">Plotly</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Transformer</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/Asif-droid/climate_chage_vs_gii_factors/blob/main/README.md" class="project-link">View Details</a>
+                    </div>
+                </div>
+
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Metal Trade Clustering Analysis</h3>
+                    <p class="project-type">Collaboration Project</p>
+                    <p>Collaborated with the Mechanical Engineering Department on a research project analyzing raw material import data (2017–2021). Applied K-Means and Gaussian Mixture Models to cluster metals based on import quantities and price variations</p>
+                    <div class="project-tech">
+                        <h4>Tech Stack:</h4>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Numpy</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">K-means clustering</span>
+                            <span class="tech-tag">GMM clustering</span>
+                            </div>
+                    </div>
+                    <a href="https://github.com/Asif-droid/Metal_cluster" class="project-link">View Details</a >
+                </div>
+            </div>
+
+
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-info">
@@ -205,27 +382,8 @@ tured documents and take necessary decisions or measures based on requirements. 
                         <a href="https://github.com/CSE-408-B1" class="project-link">View Details</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Anomaly Detection in ECG</h3>
-                        <p class="project-type">Academic Project (CSE-472)</p>
-                        <p>Project uses transformer model (encoder) layer to separate healthy heart signals from unhealthy ones.</p>
-                        <div class="project-tech">
-                            <h4>Tech Stack:</h4>
-                            <div class="tech-stack">
-                                <span class="tech-tag">NumPy</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">Matplotlib</span>
-                                <span class="tech-tag">Plotly</span>
-                                <span class="tech-tag">PyTorch</span>
-                                <span class="tech-tag">RNN</span>
-                                <span class="tech-tag">Transformer</span>
-                                <span class="tech-tag">Python</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/Asif-droid/CSE-472-project-anomally-detection-in-ecg-/tree/main" class="project-link">View Details</a>
-                    </div>
-                </div>
+
+                
                 <div class="project-card">
                     <div class="project-info">
                         <h3>Peek a Book</h3>
@@ -245,26 +403,7 @@ tured documents and take necessary decisions or measures based on requirements. 
                         <a href="https://github.com/Asif-droid/PeekABook" class="project-link">View Details</a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Metal Trade Clustering Analysis</h3>
-                        <p class="project-type">Collaboration Project</p>
-                        <p>Collaborated with the Mechanical Engineering Department on a research project analyzing raw material import data (2017–2021). Applied K-Means and Gaussian Mixture Models to cluster metals based on import quantities and price variations</p>
-                        <div class="project-tech">
-                            <h4>Tech Stack:</h4>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">Numpy</span>
-                                <span class="tech-tag">Scikit-learn</span>
-                                <span class="tech-tag">Matplotlib</span>
-                                <span class="tech-tag">K-means clustering</span>
-                                <span class="tech-tag">GMM clustering</span>
-                                </div>
-                        </div>
-                        <a href="https://github.com/Asif-droid/Metal_cluster" class="project-link">View Details</a >
-                    </div>
-                </div>
+                
 
                 <div class="project-card">
                     <div class="project-info">
@@ -283,6 +422,9 @@ tured documents and take necessary decisions or measures based on requirements. 
                         <a href="https://github.com/Asif-droid/3D_solar_system/tree/main" class="project-link">View Details</a>
                     </div>
                 </div>
+
+
+
             </div>
         </div>
     </section>
@@ -405,7 +547,7 @@ tured documents and take necessary decisions or measures based on requirements. 
 
     <section id="skills" class="skills">
   <div class="container">
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title">Technology</h2>
     <div class="skills-container">
 
         <div class="skill-category">
@@ -469,6 +611,7 @@ tured documents and take necessary decisions or measures based on requirements. 
           <span class="skill-tag">FAISS</span>
           <span class="skill-tag">Pinecone</span>
           <span class="skill-tag">Vector DBs</span>
+          <span class="skill-tag">neo4j</span>
         </div>
       </div>
 
@@ -504,7 +647,8 @@ tured documents and take necessary decisions or measures based on requirements. 
           <span class="skill-tag">Oracle</span>
           <span class="skill-tag">MySQL</span>
           <span class="skill-tag">SQLite</span>
-          <span class="skill-tag">Prisma</span>
+          <span class="skill-tag">Cypher</span>
+          
         </div>
       </div>
 
@@ -522,6 +666,7 @@ tured documents and take necessary decisions or measures based on requirements. 
                     <div class="education-item">
                         <h4>MSc in Computer Science and Engineering</h4>
                         <p>Bangladesh University of Engineering and Technology (BUET)</p>
+                        <p>CGPA: 4.00/4.00 (Till 1st semester)</p>
                         <!-- <p><i>Currently in 1st Semester</i></p> -->
                     </div>
                     <div class="education-item">
@@ -537,10 +682,11 @@ tured documents and take necessary decisions or measures based on requirements. 
                     <div class="education-item">
                         <h4>Online Courses</h4>
                         <ul>
+                            <li> Agentic Knowledge Graph Construction with neo4j <a href="https://learn.deeplearning.ai/accomplishments/9fa563c6-7662-493d-aebe-fb4da6c5e715?usp=sharing">(Deeplearning.ai)</a></li>
                             <li> Neural networks and Deep learning, Improving Deep Neural networks: Hyper parameter tuning. (Coursera)</li>
                             <li>Intermediate Machine Learning (Kaggle)</li>
                             <li>Python for everybody (5 course specialization) (Coursera)</li>
-                            <li> HTML, CSS, and Javascript for Web developers (Coursera)</li>
+                            
                         </ul>
                         <a href="https://drive.google.com/drive/folders/1Z6WyDNCSqoaTM4AZm1cXeE9Tojt8pZtu?usp=sharing" class="project-link">View Certificates</a>
                     </div>
@@ -563,7 +709,7 @@ tured documents and take necessary decisions or measures based on requirements. 
                         <h3>Finalist</h3>
                         <p>WICC (Water Innovation Challenge Competition)</p>
                     </div>
-                    <span class="award-year">2021</span>
+                    <span class="award-year">2022</span>
                 </div>
                 <div class="award-item">
                     
@@ -624,8 +770,18 @@ tured documents and take necessary decisions or measures based on requirements. 
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>asifurbuet98@gmail.com</p>
+                        <p>asifurbuet98@gmail.com<br></p>
+                        
+                        
                     </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>asifurndc8030@gmail.com</p>
+                           
+                    </div>
+
+                    
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/k-m-asifur-rahman-7035531aa/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/Asif-droid" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>

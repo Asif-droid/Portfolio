@@ -144,11 +144,18 @@ tured documents and take necessary decisions or measures based on requirements. 
                     <h3> 5GPT: 5G Vulnerability Detection by Combining Zero-Shot Capabilities of GPT-4 with
  Domain Aware Strategies Through Prompt Engineering</h3>
                         <a href="https://ieeexplore.ieee.org/document/11072222" class="project-link">Accepted in IEEE-TIFS</a>
-                    <p>We utilized GPT-4’s advanced language understanding to detect vulnerabilities directly from
- 5G specifications. Testing promising cases using Open5GS and UERANSIM. We first adopted
- a zero-shot approach, then a domain-aware strategy, where we explicitly teach GPT-4 about
- security properties and hazard indicators. We found 47 potential issues 27 of them was previously
- unreported. Confirmed 9 vulnerabilities, simulating 14 test cases.</p>
+                    <p>In this research I worked under the guidance of Prof. Md. Shohrab Hossain, alongside Prof. Ren-Hung Hwang and Prof. Ying-Dar Lin
+from NYCU, Taiwan, on exploring the vulnerabilities of 5G. Our goal was to develop a system capable of identifying security weaknesses in 5G specifications. This work led to our
+paper, ”5GPT: 5G Vulnerability Detection by Combining Zero-Shot Reasoning and Domain-Aware
+Prompting,” which has been accepted for publication in IEEE-TIFS. Our approach combined
+GPT-4’s zero-shot reasoning capabilities with a domain-aware prompting strategy, where we incorporated telecom-specific security properties, signaling rules, and hazard indicators. This allowed the
+model to generate more accurate and technically grounded vulnerability hypotheses compared to standard prompting.<br> My responsibility was to put our ideas to the test; I dug deep into the UERANSIM
+codebase. I tried to trace each potential vulnerability back to exact parts of the user equipment (UE)
+and core network implementations. Having that code-level insight helped me simulate tricky scenarios like malformed messages (sent altered hash in reply), rare protocol deviations (turned on/off
+ACK messages), and unusual signaling patterns (sent random messages while the registration process was going on) with great precision. With our collaborative effort, this combined approach of
+smart AI prompting and hands-on system analysis uncovered 47 potential vulnerabilities, including
+27 that had not been reported before. We were able to confirm 9 of those through practical testing
+using Open5GS and UERANSIM.</p>
                 </div>
                 <div class="research-item">
                     <h3>5G RAG Based Conformance Testing</h3>
